@@ -1,0 +1,21 @@
+<swiper
+    indicator-dots="true"
+    autoplay="true"
+    interval="2000"
+    circular="true"
+>
+    <block wx:for="{{swiperImgUrls}}" wx:key="src">
+        <swiper-item wx:key="{{item.url}}">
+            <image src="{{item.url}}" mode="widthFix" class="img"></image>
+        </swiper-item>
+    </block>
+</swiper>
+
+<view class="playlist-container">
+    <block wx:for="{{playList}}" wx:key="_id">
+        <playList playList="{{item}}"></playList>
+    </block>
+</view>
+
+<!-- <button bindtap="_getMovie">电影</button> -->
+<!-- <button bindtap="_getMusic">music</button> -->
